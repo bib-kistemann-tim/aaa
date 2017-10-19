@@ -1,16 +1,38 @@
 class Ampel():
-	def __init__(self):
-		self.rot = rot
-		self.gruen = gruen
-		self.orange = orange
-		self.orangeblinken = orangeblinken
-	def setze():
-		self.farbe = farbe
-	def umschalten():
-		self.farbe = farbe + 1
-	def blinken():
-		self.orangeblinken
-		return blinken
-		self.rot
-	def Anzeigen():
-		
+    def __init__(self):
+        self.farbe = "rot"
+        
+    def setze(self, farbe):
+        self.farbe = farbe
+        
+    def umschalten(self):
+        if "rot" == self.farbe:
+            self.farbe = "grün"
+        elif "grün" == self.farbe:
+            self.farbe = "orange"
+        else: self.farbe = "rot"
+        
+        
+    def blinken(self):
+        self.farbe = "orange blinken"
+
+    def Anzeigen(self):
+        print(self.farbe)
+        
+        
+ampel = Ampel()
+for i in range (9):
+    ampel.umschalten()
+    ampel.Anzeigen()
+ampel.blinken()
+ampel.Anzeigen()
+ampel.umschalten()
+ampel.Anzeigen()
+ampel.umschalten()
+ampel.Anzeigen()
+ampel.setze("rot")
+ampel.Anzeigen()
+ampel.blinken()
+ampel.Anzeigen()
+ampel.umschalten()
+ampel.Anzeigen()
